@@ -18,5 +18,21 @@
 // {car: 'y', veces: 2}
 
 const contarCar = value => {
-  return
+  const result = {}
+  value.toLowerCase()
+    .split('')
+    .forEach(letter => {
+      if (/[a-z0-9]/.test(letter)) {
+        if(result.hasOwnProperty(letter)) {
+          result[letter].veces++
+        } else {
+          result[letter] = { car: letter, veces: 1 }
+        }
+      }
+    })
+  return Object.values(result).sort((a,b) => a.car.localeCompare(b.car))
 }
+
+// Prueba
+const resultado = contarCar("Hoy ya es día 10");
+console.log(resultado);
