@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 
-import { Carousel } from "@/components"
+import { Carousel, PriceOwner } from "@/components"
 import useMediaQuery from "@/hooks/useMediaQuery";
 
 import locationIcon from '@/assets/location.svg'
@@ -83,10 +83,8 @@ export default function Home() {
         </div>
         
         <div className="mb-8">
-          <div className="md:w-[320px] h-[356px] mb-8 border-[0.5px] border-gray-300 rounded-xl">
-
-          </div>
-          <button className="w-full bg-betwo rounded-3xl py-3 text-black text-base md:cursor-pointer">
+          <PriceOwner />
+          <button className="w-full bg-betwo rounded-3xl py-3 text-black text-base md:cursor-pointer hover:opacity-75">
             Invitar inquilino
           </button>
         </div>
