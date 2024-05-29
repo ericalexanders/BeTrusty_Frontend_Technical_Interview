@@ -48,7 +48,7 @@ export default function Sidebar() {
   const router = useRouter()
 
   return (
-    <nav className={`h-20 fixed md:relative bottom-0 w-full ${open ? 'md:w-72' : 'md:w-20'} duration-300 md:h-screen bg-black py-6 px-6`}>
+    <nav className={`h-20 fixed md:relative bottom-0 w-full ${open ? 'md:w-72' : 'md:w-[4.5rem]'} duration-300 md:h-screen bg-black py-6 px-6`}>
       <Image
         src="/menu.png"
         width={30}
